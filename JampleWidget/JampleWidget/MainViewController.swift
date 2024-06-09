@@ -9,10 +9,20 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var viewModel: MainViewModel!
+    
+    @IBOutlet weak var stepCountsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Hello, JampleWidget!")
+        self.viewModel = MainViewModel()
+    }
+    
+    @IBAction func getStepCounts(_ sender: Any) {
+        self.viewModel.getStepCounts { stepCounts in
+            DispatchQueue.main.async { self.stepCountsLabel.text = stepCounts }
+        }
     }
     
 }
