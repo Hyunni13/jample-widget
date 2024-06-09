@@ -26,15 +26,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qB-eE-cw1">
+                                <rect key="frame" x="20" y="743" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YsW-se-U6G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Step Counts"/>
+                                <connections>
+                                    <action selector="getStepCounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZj-Tk-VFg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-bT-16V">
+                                <rect key="frame" x="20" y="174" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QWw-mz-Xmk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRK-Sa-2ZB" secondAttribute="trailing" constant="20" id="2te-cm-k46"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6qB-eE-cw1" secondAttribute="bottom" constant="35" id="3Jz-2n-pih"/>
                             <constraint firstItem="bRK-Sa-2ZB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4et-Pl-LWn"/>
+                            <constraint firstItem="6qB-eE-cw1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6VO-av-doM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6qB-eE-cw1" secondAttribute="trailing" constant="20" id="9OG-7a-6Zx"/>
+                            <constraint firstItem="ONE-bT-16V" firstAttribute="top" secondItem="bRK-Sa-2ZB" secondAttribute="bottom" constant="30" id="PmZ-r6-iN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ONE-bT-16V" secondAttribute="trailing" constant="20" id="QA7-U4-bHE"/>
+                            <constraint firstItem="ONE-bT-16V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bjx-Hh-fZf"/>
                             <constraint firstItem="bRK-Sa-2ZB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="yCW-bW-Cqf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stepCountsLabel" destination="ONE-bT-16V" id="fHz-EM-CzD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
