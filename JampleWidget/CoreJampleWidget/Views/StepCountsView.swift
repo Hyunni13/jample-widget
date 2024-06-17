@@ -6,13 +6,29 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct StepCountsView: View {
+    @Environment(\.widgetFamily) var family: WidgetFamily
+
     var entry: StepCountsProvider.Entry
     
+    @ViewBuilder
     var body: some View {
-        VStack {
-            Text("👟 Step Counts: \(self.entry.stepCounts)")
+        switch family {
+        case .systemSmall:
+            VStack {
+                Text("👟 Step Counts: \(self.entry.stepCounts)")
+            }
+        case .systemMedium:
+            VStack {
+                Text("Hi!")
+                Text("👟 Step Counts: \(self.entry.stepCounts)")
+            }
+        default:
+            VStack {
+                Text("죄송합니다. 문제가 발생했어요 🥲")
+            }
         }
     }
 }

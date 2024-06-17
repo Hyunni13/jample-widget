@@ -16,7 +16,9 @@ struct StepCountsProvider: TimelineProvider {
     }
     
     func getSnapshot(in context: Context, completion: @escaping (StepCountsEntry) -> ()) {
-        self.getStepCounts { entry in completion(entry) }
+        if context.isPreview {
+            self.getStepCounts { entry in completion(entry) }            
+        }
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<StepCountsEntry>) -> ()) {
@@ -36,7 +38,8 @@ struct StepCountsProvider: TimelineProvider {
             case .success(let stepCount):
                 completion(StepCountsEntry(stepCounts: String(stepCount), date: currentDate))
             case .failure:
-                // TODO: 통신 실패 View 로딩
+                // TODO: 통신 실패 시, -9 반환
+                completion(StepCountsEntry(stepCounts: String(-9), date: currentDate))
                 break
             }
         }

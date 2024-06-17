@@ -11,7 +11,7 @@ class PedometerService {
     
     let pedometer = CMPedometer()
     
-    func getStepCounts(startDate: Date, endDate: Date, completion: @escaping (Result<Double, APIError>) -> Void) {
+    func getStepCounts(startDate: Date, endDate: Date, completion: @escaping (Result<Int, APIError>) -> Void) {
         self.pedometer.queryPedometerData(from: startDate, to: endDate) { data, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -22,7 +22,7 @@ class PedometerService {
             
             if let data = data {
                 // 정상 케이스
-                let stepCounts = data.numberOfSteps.doubleValue
+                let stepCounts = Int(data.numberOfSteps.doubleValue)
                 completion(.success(stepCounts))
             } else {
                 completion(.failure(.responseError))
