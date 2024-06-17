@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0831AB572C15F25F001AB33E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831AB562C15F25F001AB33E /* APIError.swift */; };
+		0871DA152C200FD4008434AF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0871DA142C200FD4008434AF /* WidgetKit.framework */; };
+		0871DA172C200FD4008434AF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0871DA162C200FD4008434AF /* SwiftUI.framework */; };
+		0871DA1A2C200FD4008434AF /* CoreJampleWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA192C200FD4008434AF /* CoreJampleWidgetBundle.swift */; };
+		0871DA1C2C200FD4008434AF /* StepCountsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA1B2C200FD4008434AF /* StepCountsWidget.swift */; };
+		0871DA1E2C200FD5008434AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0871DA1D2C200FD5008434AF /* Assets.xcassets */; };
+		0871DA222C200FD5008434AF /* CoreJampleWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0871DA122C200FD4008434AF /* CoreJampleWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0871DA2B2C201136008434AF /* StepCountsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA2A2C201136008434AF /* StepCountsProvider.swift */; };
+		0871DA2E2C201162008434AF /* StepCountsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA2D2C201162008434AF /* StepCountsEntry.swift */; };
+		0871DA302C2011F1008434AF /* StepCountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA2F2C2011F1008434AF /* StepCountsView.swift */; };
 		089373ED2C15A9940057D59E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373EC2C15A9940057D59E /* AppDelegate.swift */; };
 		089373F12C15A9940057D59E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373F02C15A9940057D59E /* MainViewController.swift */; };
 		089373F42C15A9940057D59E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 089373F32C15A9940057D59E /* Base */; };
@@ -22,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0871DA202C200FD5008434AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089373E12C15A9940057D59E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0871DA112C200FD4008434AF;
+			remoteInfo = CoreJampleWidgetExtension;
+		};
 		089374002C15A9950057D59E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089373E12C15A9940057D59E /* Project object */;
@@ -38,8 +54,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0871DA232C200FD5008434AF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0871DA222C200FD5008434AF /* CoreJampleWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0831AB562C15F25F001AB33E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		0871DA122C200FD4008434AF /* CoreJampleWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CoreJampleWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0871DA142C200FD4008434AF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0871DA162C200FD4008434AF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0871DA192C200FD4008434AF /* CoreJampleWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreJampleWidgetBundle.swift; sourceTree = "<group>"; };
+		0871DA1B2C200FD4008434AF /* StepCountsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsWidget.swift; sourceTree = "<group>"; };
+		0871DA1D2C200FD5008434AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0871DA1F2C200FD5008434AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0871DA2A2C201136008434AF /* StepCountsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsProvider.swift; sourceTree = "<group>"; };
+		0871DA2D2C201162008434AF /* StepCountsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsEntry.swift; sourceTree = "<group>"; };
+		0871DA2F2C2011F1008434AF /* StepCountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsView.swift; sourceTree = "<group>"; };
 		089373E92C15A9940057D59E /* JampleWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JampleWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089373EC2C15A9940057D59E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089373F02C15A9940057D59E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +98,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0871DA0F2C200FD4008434AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0871DA172C200FD4008434AF /* SwiftUI.framework in Frameworks */,
+				0871DA152C200FD4008434AF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		089373E62C15A9940057D59E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,12 +131,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0871DA132C200FD4008434AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA142C200FD4008434AF /* WidgetKit.framework */,
+				0871DA162C200FD4008434AF /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0871DA182C200FD4008434AF /* CoreJampleWidget */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA272C20110A008434AF /* StepCounts */,
+				0871DA292C201116008434AF /* Views */,
+				0871DA282C201111008434AF /* Entries */,
+				0871DA192C200FD4008434AF /* CoreJampleWidgetBundle.swift */,
+				0871DA1B2C200FD4008434AF /* StepCountsWidget.swift */,
+				0871DA1D2C200FD5008434AF /* Assets.xcassets */,
+				0871DA1F2C200FD5008434AF /* Info.plist */,
+			);
+			path = CoreJampleWidget;
+			sourceTree = "<group>";
+		};
+		0871DA272C20110A008434AF /* StepCounts */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA2A2C201136008434AF /* StepCountsProvider.swift */,
+			);
+			path = StepCounts;
+			sourceTree = "<group>";
+		};
+		0871DA282C201111008434AF /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA2D2C201162008434AF /* StepCountsEntry.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		0871DA292C201116008434AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA2F2C2011F1008434AF /* StepCountsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		089373E02C15A9940057D59E = {
 			isa = PBXGroup;
 			children = (
 				089373EB2C15A9940057D59E /* JampleWidget */,
 				089374022C15A9950057D59E /* JampleWidgetTests */,
 				0893740C2C15A9950057D59E /* JampleWidgetUITests */,
+				0871DA182C200FD4008434AF /* CoreJampleWidget */,
+				0871DA132C200FD4008434AF /* Frameworks */,
 				089373EA2C15A9940057D59E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +196,7 @@
 				089373E92C15A9940057D59E /* JampleWidget.app */,
 				089373FF2C15A9950057D59E /* JampleWidgetTests.xctest */,
 				089374092C15A9950057D59E /* JampleWidgetUITests.xctest */,
+				0871DA122C200FD4008434AF /* CoreJampleWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +238,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0871DA112C200FD4008434AF /* CoreJampleWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0871DA262C200FD5008434AF /* Build configuration list for PBXNativeTarget "CoreJampleWidgetExtension" */;
+			buildPhases = (
+				0871DA0E2C200FD4008434AF /* Sources */,
+				0871DA0F2C200FD4008434AF /* Frameworks */,
+				0871DA102C200FD4008434AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreJampleWidgetExtension;
+			productName = CoreJampleWidgetExtension;
+			productReference = 0871DA122C200FD4008434AF /* CoreJampleWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		089373E82C15A9940057D59E /* JampleWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 089374132C15A9950057D59E /* Build configuration list for PBXNativeTarget "JampleWidget" */;
@@ -146,10 +262,12 @@
 				089373E52C15A9940057D59E /* Sources */,
 				089373E62C15A9940057D59E /* Frameworks */,
 				089373E72C15A9940057D59E /* Resources */,
+				0871DA232C200FD5008434AF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0871DA212C200FD5008434AF /* PBXTargetDependency */,
 			);
 			name = JampleWidget;
 			productName = JampleWidget;
@@ -202,6 +320,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					0871DA112C200FD4008434AF = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					089373E82C15A9940057D59E = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -231,11 +352,20 @@
 				089373E82C15A9940057D59E /* JampleWidget */,
 				089373FE2C15A9950057D59E /* JampleWidgetTests */,
 				089374082C15A9950057D59E /* JampleWidgetUITests */,
+				0871DA112C200FD4008434AF /* CoreJampleWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0871DA102C200FD4008434AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0871DA1E2C200FD5008434AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		089373E72C15A9940057D59E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +393,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0871DA0E2C200FD4008434AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0871DA1A2C200FD4008434AF /* CoreJampleWidgetBundle.swift in Sources */,
+				0871DA2B2C201136008434AF /* StepCountsProvider.swift in Sources */,
+				0871DA302C2011F1008434AF /* StepCountsView.swift in Sources */,
+				0871DA2E2C201162008434AF /* StepCountsEntry.swift in Sources */,
+				0871DA1C2C200FD4008434AF /* StepCountsWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		089373E52C15A9940057D59E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +438,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0871DA212C200FD5008434AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0871DA112C200FD4008434AF /* CoreJampleWidgetExtension */;
+			targetProxy = 0871DA202C200FD5008434AF /* PBXContainerItemProxy */;
+		};
 		089374012C15A9950057D59E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 089373E82C15A9940057D59E /* JampleWidget */;
@@ -328,6 +475,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0871DA242C200FD5008434AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AX94CTZN8D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoreJampleWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CoreJampleWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.sanghyun.JampleWidget.CoreJampleWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0871DA252C200FD5008434AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AX94CTZN8D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoreJampleWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CoreJampleWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.sanghyun.JampleWidget.CoreJampleWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		089374112C15A9950057D59E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,6 +661,7 @@
 		089374142C15A9950057D59E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +696,7 @@
 		089374152C15A9950057D59E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,6 +807,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0871DA262C200FD5008434AF /* Build configuration list for PBXNativeTarget "CoreJampleWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0871DA242C200FD5008434AF /* Debug */,
+				0871DA252C200FD5008434AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		089373E42C15A9940057D59E /* Build configuration list for PBXProject "JampleWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
