@@ -6,6 +6,6 @@
 //
 
 enum APIError: Error {
-    case pedometerError(message: String)
-    case undefinedError
+    case pedometerError
+    case responseError
 }

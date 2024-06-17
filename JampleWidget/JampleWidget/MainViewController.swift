@@ -9,7 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var viewModel: MainViewModel!
+    var viewModel: MainViewModel! {
+        didSet { self.displayStepCounts() }
+    }
     
     @IBOutlet weak var stepCountsLabel: UILabel!
     
@@ -20,6 +22,10 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func getStepCounts(_ sender: Any) {
+        self.displayStepCounts()
+    }
+    
+    private func displayStepCounts() {
         self.viewModel.getStepCounts { stepCounts in
             DispatchQueue.main.async { self.stepCountsLabel.text = stepCounts }
         }

@@ -19,18 +19,9 @@ class MainViewModel {
             switch result {
             case .success(let stepCounts):
                 completion(String(stepCounts))
-            case .failure(let error):
-                self.handleError(error: error)
+            case .failure:
+                break
             }
-        }
-    }
-    
-    private func handleError(error: APIError) {
-        switch error {
-        case .pedometerError(let message):
-            print("Pedometer Error", message)
-        case .undefinedError:
-            print("Undefined Error")
         }
     }
     
