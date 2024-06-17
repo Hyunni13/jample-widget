@@ -32,3 +32,17 @@ struct StepCountsView: View {
         }
     }
 }
+
+@available(iOS 17.0, *)
+#Preview(as: .systemSmall) {
+    StepCountsWidget()
+} timeline: {
+    StepCountsEntry(stepCounts: "3000")
+}
+
+@available(iOS 17.0, *)
+#Preview(as: .systemMedium) {
+    StepCountsWidget()
+} timeline: {
+    StepCountsEntry(stepCounts: "3000")
+}
