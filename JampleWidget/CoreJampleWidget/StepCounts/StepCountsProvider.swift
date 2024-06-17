@@ -38,7 +38,7 @@ struct StepCountsProvider: TimelineProvider {
             case .success(let stepCount):
                 completion(StepCountsEntry(stepCounts: String(stepCount), date: currentDate))
             case .failure:
-                // TODO: 통신 실패 시, -9 반환
+                // 통신 실패 시, -9 반환
                 completion(StepCountsEntry(stepCounts: String(-9), date: currentDate))
                 break
             }

@@ -20,6 +20,7 @@
 		0871DA312C201CEB008434AF /* PedometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D208D82C15BF02008A047B /* PedometerService.swift */; };
 		0871DA322C201D98008434AF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D208DA2C15C081008A047B /* DateExtension.swift */; };
 		0871DA332C201DC9008434AF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831AB562C15F25F001AB33E /* APIError.swift */; };
+		0871DA362C208AF0008434AF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA352C208AF0008434AF /* BackgroundView.swift */; };
 		089373ED2C15A9940057D59E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373EC2C15A9940057D59E /* AppDelegate.swift */; };
 		089373F12C15A9940057D59E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373F02C15A9940057D59E /* MainViewController.swift */; };
 		089373F42C15A9940057D59E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 089373F32C15A9940057D59E /* Base */; };
@@ -83,6 +84,7 @@
 		0871DA2A2C201136008434AF /* StepCountsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsProvider.swift; sourceTree = "<group>"; };
 		0871DA2D2C201162008434AF /* StepCountsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsEntry.swift; sourceTree = "<group>"; };
 		0871DA2F2C2011F1008434AF /* StepCountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsView.swift; sourceTree = "<group>"; };
+		0871DA352C208AF0008434AF /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		089373E92C15A9940057D59E /* JampleWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JampleWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089373EC2C15A9940057D59E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089373F02C15A9940057D59E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0871DA2F2C2011F1008434AF /* StepCountsView.swift */,
+				0871DA352C208AF0008434AF /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0871DA362C208AF0008434AF /* BackgroundView.swift in Sources */,
 				0871DA1A2C200FD4008434AF /* CoreJampleWidgetBundle.swift in Sources */,
 				0871DA322C201D98008434AF /* DateExtension.swift in Sources */,
 				0871DA2B2C201136008434AF /* StepCountsProvider.swift in Sources */,

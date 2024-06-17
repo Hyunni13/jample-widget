@@ -15,14 +15,15 @@ struct StepCountsWidget: Widget {
         StaticConfiguration(kind: self.kind, provider: StepCountsProvider()) { entry in
             if #available(iOS 17.0, *) {
                 StepCountsView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
+                    .containerBackground(for: .widget, alignment: .center, content: { BackgroundView() })
+                    .containerRelativeFrame(.horizontal)
+                    .containerRelativeFrame(.vertical)
             } else if #available(iOS 15.0, *) {
                 StepCountsView(entry: entry)
-                    .padding()
-                    .background()
+                    .background(alignment: .center, content: { BackgroundView() })
+                    .ignoresSafeArea(edges: .all)
             } else {
-                StepCountsView(entry: entry)
-                    .padding()
+                // TODO: Default View 렌더링
             }
         }
         .configurationDisplayName("걸음수 위젯")
