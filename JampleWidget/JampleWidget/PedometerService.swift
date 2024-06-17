@@ -14,7 +14,9 @@ class PedometerService {
     func getStepCounts(startDate: Date, endDate: Date, completion: @escaping (Result<Double, APIError>) -> Void) {
         self.pedometer.queryPedometerData(from: startDate, to: endDate) { data, error in
             if let error = error {
-                completion(.failure(.pedometerError(message: error.localizedDescription)))
+                print(error.localizedDescription)
+                
+                completion(.failure(.pedometerError))
                 return
             }
             
@@ -23,9 +25,9 @@ class PedometerService {
                 let stepCounts = data.numberOfSteps.doubleValue
                 completion(.success(stepCounts))
             } else {
-                completion(.failure(.undefinedError))
+                completion(.failure(.responseError))
             }
         }
     }
-
+    
 }
