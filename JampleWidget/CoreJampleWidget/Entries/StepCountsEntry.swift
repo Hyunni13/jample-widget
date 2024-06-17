@@ -9,5 +9,10 @@ import WidgetKit
 
 struct StepCountsEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let stepCounts: String
+    
+    init(stepCounts: String, date: Date = Date()) {
+        self.stepCounts = stepCounts
+        self.date = date
+    }
 }

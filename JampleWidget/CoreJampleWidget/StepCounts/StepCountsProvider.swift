@@ -9,28 +9,37 @@ import WidgetKit
 
 struct StepCountsProvider: TimelineProvider {
     
+    let pedometerService = PedometerService()
+    
     func placeholder(in context: Context) -> StepCountsEntry {
-        StepCountsEntry(date: Date(), emoji: "😀")
+        StepCountsEntry(stepCounts: "3000")
     }
-
+    
     func getSnapshot(in context: Context, completion: @escaping (StepCountsEntry) -> ()) {
-        let entry = StepCountsEntry(date: Date(), emoji: "😀")
-        completion(entry)
+        self.getStepCounts { entry in completion(entry) }
     }
-
+    
     func getTimeline(in context: Context, completion: @escaping (Timeline<StepCountsEntry>) -> ()) {
-        var entries: [StepCountsEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = StepCountsEntry(date: entryDate, emoji: "😀")
-            entries.append(entry)
+        self.getStepCounts { entry in
+            
+            let timeline = Timeline(entries: [entry], policy: .atEnd)
+            completion(timeline)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+    }
+    
+    private func getStepCounts(completion: @escaping (StepCountsEntry) -> Void) {
+        let currentDate = Date()
+        let startDate = currentDate.midnight
+        
+        self.pedometerService.getStepCounts(startDate: startDate, endDate: currentDate) { result in
+            switch result {
+            case .success(let stepCount):
+                completion(StepCountsEntry(stepCounts: String(stepCount), date: currentDate))
+            case .failure:
+                // TODO: 통신 실패 View 로딩
+                break
+            }
+        }
     }
     
 }

@@ -9,14 +9,10 @@ import SwiftUI
 
 struct StepCountsView: View {
     var entry: StepCountsProvider.Entry
-
+    
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+            Text("👟 Step Counts: \(self.entry.stepCounts)")
         }
     }
 }

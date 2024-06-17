@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CoreJampleWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>JampleWidget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>089373E82C15A9940057D59E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>089373FE2C15A9950057D59E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>089374082C15A9950057D59E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
