@@ -12,7 +12,7 @@ struct StepCountsWidget: Widget {
     let kind = Constants.WIDGET_STEP_COUNTS
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: self.kind, provider: StepCountsProvider()) { entry in
+        IntentConfiguration(kind: self.kind, intent: ConfigurationIntent.self, provider: StepCountsProvider()) { entry in
             if #available(iOS 17.0, *) {
                 StepCountsView(entry: entry)
                     .containerBackground(for: .widget, content: { BackgroundView() })
