@@ -9,16 +9,27 @@ import SwiftUI
 import WidgetKit
 
 struct StepCountsView: View {
-    @Environment(\.widgetFamily) var family: WidgetFamily
+    @Environment(\.widgetFamily) var family
 
     var entry: StepCountsProvider.Entry
+    
+    var test: String {
+        switch self.entry.configuration.Content.self {
+        case .walk:
+            return "👟"
+        case .drive:
+            return "🚗"
+        default:
+            return "🚀"
+        }
+    }
     
     @ViewBuilder
     var body: some View {
         switch family {
         case .systemSmall:
             VStack {
-                Text("👟 Step Counts: \(self.entry.stepCounts)")
+                Text("\(self.test) Step Counts: \(self.entry.stepCounts)")
             }
         case .systemMedium:
             VStack {
@@ -37,12 +48,5 @@ struct StepCountsView: View {
 #Preview(as: .systemSmall) {
     StepCountsWidget()
 } timeline: {
-    StepCountsEntry(stepCounts: "3000")
-}
-
-@available(iOS 17.0, *)
-#Preview(as: .systemMedium) {
-    StepCountsWidget()
-} timeline: {
-    StepCountsEntry(stepCounts: "3000")
+    StepCountsEntry(stepCounts: "3000", configuration: ConfigurationIntent())
 }

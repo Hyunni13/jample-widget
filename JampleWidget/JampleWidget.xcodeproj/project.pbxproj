@@ -20,6 +20,11 @@
 		0871DA312C201CEB008434AF /* PedometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D208D82C15BF02008A047B /* PedometerService.swift */; };
 		0871DA322C201D98008434AF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D208DA2C15C081008A047B /* DateExtension.swift */; };
 		0871DA332C201DC9008434AF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831AB562C15F25F001AB33E /* APIError.swift */; };
+		0871DA362C208AF0008434AF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA352C208AF0008434AF /* BackgroundView.swift */; };
+		0871DA392C211457008434AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA382C211457008434AF /* Constants.swift */; };
+		0871DA3A2C211457008434AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA382C211457008434AF /* Constants.swift */; };
+		0871DA432C214D5A008434AF /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA422C214D5A008434AF /* Intents.intentdefinition */; };
+		0871DA442C214D5A008434AF /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA422C214D5A008434AF /* Intents.intentdefinition */; };
 		089373ED2C15A9940057D59E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373EC2C15A9940057D59E /* AppDelegate.swift */; };
 		089373F12C15A9940057D59E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373F02C15A9940057D59E /* MainViewController.swift */; };
 		089373F42C15A9940057D59E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 089373F32C15A9940057D59E /* Base */; };
@@ -83,6 +88,9 @@
 		0871DA2A2C201136008434AF /* StepCountsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsProvider.swift; sourceTree = "<group>"; };
 		0871DA2D2C201162008434AF /* StepCountsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsEntry.swift; sourceTree = "<group>"; };
 		0871DA2F2C2011F1008434AF /* StepCountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsView.swift; sourceTree = "<group>"; };
+		0871DA352C208AF0008434AF /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0871DA382C211457008434AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0871DA422C214D5A008434AF /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		089373E92C15A9940057D59E /* JampleWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JampleWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089373EC2C15A9940057D59E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089373F02C15A9940057D59E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 				0871DA282C201111008434AF /* Entries */,
 				0871DA192C200FD4008434AF /* CoreJampleWidgetBundle.swift */,
 				0871DA1B2C200FD4008434AF /* StepCountsWidget.swift */,
+				0871DA422C214D5A008434AF /* Intents.intentdefinition */,
 				0871DA1D2C200FD5008434AF /* Assets.xcassets */,
 				0871DA1F2C200FD5008434AF /* Info.plist */,
 			);
@@ -177,8 +186,17 @@
 			isa = PBXGroup;
 			children = (
 				0871DA2F2C2011F1008434AF /* StepCountsView.swift */,
+				0871DA352C208AF0008434AF /* BackgroundView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0871DA372C211447008434AF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA382C211457008434AF /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		089373E02C15A9940057D59E = {
@@ -207,6 +225,7 @@
 		089373EB2C15A9940057D59E /* JampleWidget */ = {
 			isa = PBXGroup;
 			children = (
+				0871DA372C211447008434AF /* Common */,
 				089373EC2C15A9940057D59E /* AppDelegate.swift */,
 				089373F02C15A9940057D59E /* MainViewController.swift */,
 				08D208D62C15BEB7008A047B /* MainViewModel.swift */,
@@ -400,10 +419,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0871DA362C208AF0008434AF /* BackgroundView.swift in Sources */,
 				0871DA1A2C200FD4008434AF /* CoreJampleWidgetBundle.swift in Sources */,
 				0871DA322C201D98008434AF /* DateExtension.swift in Sources */,
+				0871DA442C214D5A008434AF /* Intents.intentdefinition in Sources */,
 				0871DA2B2C201136008434AF /* StepCountsProvider.swift in Sources */,
 				0871DA302C2011F1008434AF /* StepCountsView.swift in Sources */,
+				0871DA3A2C211457008434AF /* Constants.swift in Sources */,
 				0871DA312C201CEB008434AF /* PedometerService.swift in Sources */,
 				0871DA332C201DC9008434AF /* APIError.swift in Sources */,
 				0871DA2E2C201162008434AF /* StepCountsEntry.swift in Sources */,
@@ -419,7 +441,9 @@
 				08D208DB2C15C081008A047B /* DateExtension.swift in Sources */,
 				089373ED2C15A9940057D59E /* AppDelegate.swift in Sources */,
 				08D208D72C15BEB8008A047B /* MainViewModel.swift in Sources */,
+				0871DA392C211457008434AF /* Constants.swift in Sources */,
 				08D208D92C15BF02008A047B /* PedometerService.swift in Sources */,
+				0871DA432C214D5A008434AF /* Intents.intentdefinition in Sources */,
 				0831AB572C15F25F001AB33E /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +700,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JampleWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Widget Test";
+				INFOPLIST_KEY_NSMotionUsageDescription = "걸음수를 수집하기 위해서 권한을 요청드려요 🥹";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -711,6 +736,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JampleWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Widget Test";
+				INFOPLIST_KEY_NSMotionUsageDescription = "걸음수를 수집하기 위해서 권한을 요청드려요 🥹";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
