@@ -21,6 +21,8 @@
 		0871DA322C201D98008434AF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D208DA2C15C081008A047B /* DateExtension.swift */; };
 		0871DA332C201DC9008434AF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831AB562C15F25F001AB33E /* APIError.swift */; };
 		0871DA362C208AF0008434AF /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA352C208AF0008434AF /* BackgroundView.swift */; };
+		0871DA392C211457008434AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA382C211457008434AF /* Constants.swift */; };
+		0871DA3A2C211457008434AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871DA382C211457008434AF /* Constants.swift */; };
 		089373ED2C15A9940057D59E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373EC2C15A9940057D59E /* AppDelegate.swift */; };
 		089373F12C15A9940057D59E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089373F02C15A9940057D59E /* MainViewController.swift */; };
 		089373F42C15A9940057D59E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 089373F32C15A9940057D59E /* Base */; };
@@ -85,6 +87,7 @@
 		0871DA2D2C201162008434AF /* StepCountsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsEntry.swift; sourceTree = "<group>"; };
 		0871DA2F2C2011F1008434AF /* StepCountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountsView.swift; sourceTree = "<group>"; };
 		0871DA352C208AF0008434AF /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0871DA382C211457008434AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		089373E92C15A9940057D59E /* JampleWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JampleWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089373EC2C15A9940057D59E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089373F02C15A9940057D59E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +187,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0871DA372C211447008434AF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0871DA382C211457008434AF /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		089373E02C15A9940057D59E = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +221,7 @@
 		089373EB2C15A9940057D59E /* JampleWidget */ = {
 			isa = PBXGroup;
 			children = (
+				0871DA372C211447008434AF /* Common */,
 				089373EC2C15A9940057D59E /* AppDelegate.swift */,
 				089373F02C15A9940057D59E /* MainViewController.swift */,
 				08D208D62C15BEB7008A047B /* MainViewModel.swift */,
@@ -408,6 +420,7 @@
 				0871DA322C201D98008434AF /* DateExtension.swift in Sources */,
 				0871DA2B2C201136008434AF /* StepCountsProvider.swift in Sources */,
 				0871DA302C2011F1008434AF /* StepCountsView.swift in Sources */,
+				0871DA3A2C211457008434AF /* Constants.swift in Sources */,
 				0871DA312C201CEB008434AF /* PedometerService.swift in Sources */,
 				0871DA332C201DC9008434AF /* APIError.swift in Sources */,
 				0871DA2E2C201162008434AF /* StepCountsEntry.swift in Sources */,
@@ -423,6 +436,7 @@
 				08D208DB2C15C081008A047B /* DateExtension.swift in Sources */,
 				089373ED2C15A9940057D59E /* AppDelegate.swift in Sources */,
 				08D208D72C15BEB8008A047B /* MainViewModel.swift in Sources */,
+				0871DA392C211457008434AF /* Constants.swift in Sources */,
 				08D208D92C15BF02008A047B /* PedometerService.swift in Sources */,
 				0831AB572C15F25F001AB33E /* APIError.swift in Sources */,
 			);

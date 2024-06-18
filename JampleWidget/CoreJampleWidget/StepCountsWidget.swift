@@ -9,18 +9,18 @@ import SwiftUI
 import WidgetKit
 
 struct StepCountsWidget: Widget {
-    let kind = "com.core-jample-widget.step-counts"
+    let kind = Constants.WIDGET_STEP_COUNTS
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: self.kind, provider: StepCountsProvider()) { entry in
             if #available(iOS 17.0, *) {
                 StepCountsView(entry: entry)
-                    .containerBackground(for: .widget, alignment: .center, content: { BackgroundView() })
+                    .containerBackground(for: .widget, content: { BackgroundView() })
                     .containerRelativeFrame(.horizontal)
                     .containerRelativeFrame(.vertical)
             } else if #available(iOS 15.0, *) {
                 StepCountsView(entry: entry)
-                    .background(alignment: .center, content: { BackgroundView() })
+                    .background(content: { BackgroundView() })
                     .ignoresSafeArea(edges: .all)
             } else {
                 // TODO: Default View 렌더링
