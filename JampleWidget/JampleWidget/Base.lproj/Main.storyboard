@@ -32,9 +32,9 @@
                                     <constraint firstAttribute="height" constant="40" id="YsW-se-U6G"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Step Counts"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Display Step Counts"/>
                                 <connections>
-                                    <action selector="getStepCounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZj-Tk-VFg"/>
+                                    <action selector="displayStepCounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRr-6J-t8E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-bT-16V">

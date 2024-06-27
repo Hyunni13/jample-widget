@@ -10,7 +10,9 @@ import WidgetKit
 
 @main
 struct CoreJampleWidgetBundle: WidgetBundle {
+    
     var body: some Widget {
         StepCountsWidget()
     }
+    
 }

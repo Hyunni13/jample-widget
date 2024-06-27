@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct BackgroundView: View {
+    
     @Environment(\.colorScheme) var colorScheme
     
+    private var isLight: Bool {
+        return colorScheme == .light ? true : false
+    }
+    
     var body: some View {
-        colorScheme == .light ? Color(white: 1.0) : Color(red: 43.0 / 255.0, green: 47.0 / 255.0, blue: 54.0 / 255.0)
+        self.isLight ? Color(white: 1.0) : Color(red: 43.0 / 255.0, green: 47.0 / 255.0, blue: 54.0 / 255.0)
     }
     
 }

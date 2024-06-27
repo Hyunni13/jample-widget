@@ -9,44 +9,44 @@ import SwiftUI
 import WidgetKit
 
 struct StepCountsView: View {
-    @Environment(\.widgetFamily) var family
-
+    
     var entry: StepCountsProvider.Entry
     
-    var test: String {
-        switch self.entry.configuration.Content.self {
-        case .walk:
-            return "👟"
-        case .drive:
-            return "🚗"
+    private var emoji: String {
+        switch self.entry.configuration.Content {
+        case .apple:
+            return "🍎"
+        case .banana:
+            return "🍌"
         default:
-            return "🚀"
+            return "🥲"
         }
     }
     
     @ViewBuilder
     var body: some View {
-        switch family {
-        case .systemSmall:
-            VStack {
-                Text("\(self.test) Step Counts: \(self.entry.stepCounts)")
+        VStack(alignment: .leading) {
+            if self.entry.isPreview == true {
+                Text("🍎")
+            } else {
+                Text(self.emoji)
             }
-        case .systemMedium:
-            VStack {
-                Text("Hi!")
-                Text("👟 Step Counts: \(self.entry.stepCounts)")
-            }
-        default:
-            VStack {
-                Text("죄송합니다. 문제가 발생했어요 🥲")
+            
+            Spacer()
+                .frame(height: 2)
+            
+            HStack {
+                if self.entry.isPreview == true {
+                    Text("🍎")
+                } else {
+                    Text(self.entry.stepCounts.description)
+                }
+                
+                Spacer()
+                    .frame(width: 1)
+                
+                Text("걸음")
             }
         }
     }
-}
-
-@available(iOS 17.0, *)
-#Preview(as: .systemSmall) {
-    StepCountsWidget()
-} timeline: {
-    StepCountsEntry(stepCounts: "3000", configuration: ConfigurationIntent())
 }
