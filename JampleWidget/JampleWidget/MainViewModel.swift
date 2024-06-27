@@ -11,11 +11,17 @@ class MainViewModel {
     
     let pedometerService = PedometerService()
     
-    func getStepCounts(completion: @escaping (String) -> Void) {
+    /**
+     걸음수 조회
+     */
+    func queryStepCounts(completion: @escaping (String) -> Void) {
         let endDate = Date()
-        let startDate = endDate.midnight
+        guard let startDate = endDate.midnight else {
+            completion(Constants.GUIDE_PEDOMETER_ERROR)
+            return
+        }
         
-        self.pedometerService.getStepCounts(startDate: startDate, endDate: endDate) { result in
+        self.pedometerService.requestStepCounts(start: startDate, end: endDate) { result in
             switch result {
             case .success(let stepCounts):
                 completion(String(stepCounts))

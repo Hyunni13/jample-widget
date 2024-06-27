@@ -21,13 +21,18 @@ class MainViewController: UIViewController {
         self.viewModel = MainViewModel()
     }
     
-    @IBAction func getStepCounts(_ sender: Any) {
+    @IBAction func displayStepCounts(_ sender: Any) {
         self.displayStepCounts()
     }
     
+    /**
+     오늘 걸음수 렌더링
+     */
     private func displayStepCounts() {
-        self.viewModel.getStepCounts { stepCounts in
-            DispatchQueue.main.async { self.stepCountsLabel.text = stepCounts }
+        self.viewModel.queryStepCounts { stepCounts in
+            DispatchQueue.main.async {
+                self.stepCountsLabel.text = stepCounts
+            }
         }
     }
     

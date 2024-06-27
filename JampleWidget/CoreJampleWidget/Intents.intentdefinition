@@ -27,23 +27,23 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>drive</string>
+					<string>apple</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>kJyBZV</string>
 					<key>INEnumValueIndex</key>
 					<integer>1</integer>
 					<key>INEnumValueName</key>
-					<string>drive</string>
+					<string>apple</string>
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>walk</string>
+					<string>banana</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>bvCe3T</string>
 					<key>INEnumValueIndex</key>
 					<integer>2</integer>
 					<key>INEnumValueName</key>
-					<string>walk</string>
+					<string>banana</string>
 				</dict>
 			</array>
 		</dict>
@@ -91,7 +91,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>walk</string>
+						<string>apple</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>Content</string>

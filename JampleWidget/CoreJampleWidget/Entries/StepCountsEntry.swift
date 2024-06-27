@@ -8,13 +8,17 @@
 import WidgetKit
 
 struct StepCountsEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
-    let stepCounts: String
     
-    init(stepCounts: String, configuration: ConfigurationIntent, date: Date = Date()) {
-        self.stepCounts = stepCounts
+    let date = Date()
+    let configuration: ConfigurationIntent
+    let stepCounts: Int
+    
+    var isPreview: Bool?
+    
+    init(stepCounts: Int, configuration: ConfigurationIntent, isPreview: Bool = false) {
         self.configuration = configuration
-        self.date = date
+        self.stepCounts = stepCounts
+        self.isPreview = isPreview
     }
+    
 }

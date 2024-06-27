@@ -7,18 +7,17 @@
 
 import Foundation
 
-/**
- 시간 조작에 실패하면, 자기 자신 반환
- */
 extension Date {
     
     /**
-     자정 구하기
+     자정
+     
+     - 2024. 06. 27. 22:54 -> 2024. 06. 27. 00:00
      */
-    var midnight: Date {
+    var midnight: Date? {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
         
-        return Calendar.current.date(from: components) ?? self
+        return Calendar.current.date(from: components)
     }
     
 }

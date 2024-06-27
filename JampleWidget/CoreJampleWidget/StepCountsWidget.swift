@@ -9,6 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct StepCountsWidget: Widget {
+    
     let kind = Constants.WIDGET_STEP_COUNTS
 
     var body: some WidgetConfiguration {
@@ -22,12 +23,11 @@ struct StepCountsWidget: Widget {
                 StepCountsView(entry: entry)
                     .background(content: { BackgroundView() })
                     .ignoresSafeArea(edges: .all)
-            } else {
-                // TODO: Default View 렌더링
             }
         }
         .configurationDisplayName("걸음수 위젯")
         .description("걸음수를 한눈에 살펴보세요.")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall])
     }
+    
 }
